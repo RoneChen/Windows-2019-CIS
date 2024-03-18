@@ -79,9 +79,12 @@
   ansible.windows.win_user_right:
       name: SeIncreaseQuotaPrivilege
       users:
-          - Administrators
-          - Local Service
-          - Network Service
+          - Guests
+          - Users
+          - Preplicator
+          - Backup Operators
+          - Event log Readers
+          - Performance Log Users
       action: set
   when:
       - win19cis_rule_2_2_6
